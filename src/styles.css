@@ -64,7 +64,7 @@ button{
 }
 
 header{
-  width: 100%;
+  width: 100vw;
   display: flex;
   background-color: var(--primary-header-bg-color);
   align-items: center;
@@ -94,7 +94,6 @@ header button{
 main{
   display: flex;
   flex-direction: column;
-  width: 75vw;
   color: var(--primary-font-color);
 }
 
@@ -105,17 +104,22 @@ label{
 }
 
 .quote-control{
+  width: 75vw;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  gap: 1em;
   margin: 0.5em 1em;
-  padding: 1rem 2rem;
-  font-size: 1rem;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
 }
 
 #random-quote-btn{
   background-color: var(--primary-control-btn-bg-color);
   color: var(--primary-button-text-color);
+  margin: 0.1em 0.2em;
+  padding: 0.5em 1em;
 
 }
 
@@ -141,16 +145,20 @@ select:hover{
 .screen{
   display: flex;
   flex-direction: column;
-  height: 45vh;
+  height: 60vh;
   background-color: var(--primary-quote-bg-color);
   border-radius: 2em;
   color: var(--primary-quote-text-color);
   box-shadow: 0 4px 4px var(--primary-box-shadow-color);
+  margin: 1em 2em;
 }
 
 .quote-display-area{
-  height: 80%;
-  padding: 1em 2em;
+  height: 75%;
+  padding: 0.6em 1.4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .quote-nav{

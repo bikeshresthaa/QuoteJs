@@ -2,7 +2,6 @@ import { quotesManager } from "./quotes_handler.js";
 
 const initializeEventListeners = function (){
 
-  
   const handleNext = function(){
     displayQuote(currentCategoryList.getNextQuote());
   }
@@ -45,17 +44,15 @@ const initializeEventListeners = function (){
     return quotesManager(getCategory());
   }
 
+  let currentCategoryList = getQuoteList();
   
   const themeBtn = document.querySelector('.theme-btn');
   themeBtn.addEventListener('click', ()=> {
     const body = document.body;
     themeBtn.textContent = body.classList.contains('dark-theme') ? 'Light Mode' : 'Dark Mode';
     body.classList.toggle('dark-theme');
-  
   });
 
-  let currentCategoryList = getQuoteList();
-    
   const fontSelector = document.getElementById('font-select');
   fontSelector.addEventListener('change', fontHandler);
 
