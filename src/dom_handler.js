@@ -22,7 +22,6 @@ const initializeEventListeners = function (){
   }
   
   const categoryHandler = function() {
-    
     currentCategoryList = quotesManager(this.value);
     displayQuote(currentCategoryList.getQuote());
     
@@ -45,6 +44,15 @@ const initializeEventListeners = function (){
   const getQuoteList = function(){
     return quotesManager(getCategory());
   }
+
+  
+  const themeBtn = document.querySelector('.theme-btn');
+  themeBtn.addEventListener('click', ()=> {
+    const body = document.body;
+    themeBtn.textContent = body.classList.contains('dark-theme') ? 'Light Mode' : 'Dark Mode';
+    body.classList.toggle('dark-theme');
+  
+  });
 
   let currentCategoryList = getQuoteList();
     

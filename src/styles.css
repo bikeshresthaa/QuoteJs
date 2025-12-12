@@ -5,11 +5,57 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+:root{
+  --primary-font-color: #2e2e2e;                       
+  --primary-logo-color: #1f1f1f;                        
+  --primary-header-bg-color: #f5d547;                   
+  --primary-main-bg-color: #f4f4f4;                    
+  --primary-quote-bg-color: #faf7d1;                  
+  --primary-quote-text-color: #333;                   
+  --primary-button-hover-opacity: 0.85;
+  --primary-button-text-color: #111;                    
+
+  --primary-box-shadow-color: rgba(0,0,0,0.15);        
+
+  --primary-header-btn-bg-color: #e9d27c;             
+  --primary-header-btn-hover-bg-color: #d6d6d6;         
+
+  --primary-control-btn-hover-bg-color: #d0cfb8;       
+  --primary-nav-btn-bg-color: #ccc7b3;                  
+  --primary-nav-btn-hover-bg-color: #b2ac94;         
+
+  --primary-control-btn-bg-color: #e1e0d7; 
+}
+
+.dark-theme{
+  --primary-font-color: #fffdfd;                       
+  --primary-logo-color: #ffffff;                       
+
+  --primary-header-bg-color: #3d3d3d;                   
+  --primary-main-bg-color: #2e2e2e;                    
+  --primary-quote-bg-color: #3c3b34;                
+  --primary-quote-text-color: #fff9f9;            
+
+  --primary-button-hover-opacity: 0.7;
+  --primary-button-text-color: #ffffff;
+
+  --primary-box-shadow-color: rgba(0,0,0,0.6);          
+
+  --primary-header-btn-bg-color: #7e7e7e;              
+  --primary-header-btn-hover-bg-color: #bfbfbf;         
+
+  --primary-control-btn-hover-bg-color: #666452;      
+  --primary-nav-btn-bg-color: #5e5b49;                  
+  --primary-nav-btn-hover-bg-color: #4a4738;        
+  --primary-control-btn-bg-color: #4f4f4f;   
+}
+
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #333;
+  color: var(--primary-font-color);
+  background-color: var(--primary-main-bg-color);
 }
 
 button{
@@ -20,34 +66,51 @@ button{
   border-radius: 2em;
   border: none;
   background-color: none;
+  cursor: pointer;
+  color: var(--primary-button-text-color);
+  opacity: var(--primary-button-hover-opacity);
 
 }
 
 header{
   width: 100%;
   display: flex;
-  background-color: floralwhite;
+  background-color: var(--primary-header-bg-color);
   align-items: center;
   justify-content: space-between;
   height: 10vh;
   padding: 2em 3em;
   margin-bottom: 4px;
-  box-shadow: 0 4px 4px rgb(214, 207, 192);
+  box-shadow: 0 4px 4px var(--primary-box-shadow-color);
 }
 
 header button{
   border: none;
-  background-color: none;
+  background-color: var(--primary-header-btn-bg-color);
 }
 
 .theme-btn:hover {
-  background-color: rgb(225, 221, 211);
+  background-color: var(--primary-header-btn-hover-bg-color);
+  opacity: var(--primary-button-hover-opacity);
+}
+
+.title{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-logo-color);
 }
 
 main{
   display: flex;
   flex-direction: column;
   width: 75vw;
+  color: var(--primary-font-color);
+}
+
+label{
+  font-size: 1.2rem;
+  margin: 0.5em 1em;
+  color: var(--primary-font-color);
 }
 
 .quote-control{
@@ -59,18 +122,39 @@ main{
   font-size: 1rem;
 }
 
+#random-quote-btn{
+  background-color: var(--primary-control-btn-bg-color);
+  color: var(--primary-button-text-color);
+
+}
+
+#random-quote-btn:hover{
+  background-color: var(--primary-control-btn-hover-bg-color);
+  opacity: var(--primary-button-hover-opacity);
+}
+
 select{
   font-size: 0.9em;
   border-radius: 2em;
   padding: 0.2em 0.5em;
+  cursor: pointer;
+  background-color: var(--primary-control-btn-bg-color);
+  color: var(--primary-button-text-color); 
+}
+
+select:hover{
+  background-color: var(--primary-nav-btn-hover-bg-color);
+  opacity: var(--primary-button-hover-opacity);
 }
 
 .screen{
   display: flex;
   flex-direction: column;
   height: 45vh;
-  background-color: rgb(235, 235, 201);
+  background-color: var(--primary-quote-bg-color);
   border-radius: 2em;
+  color: var(--primary-quote-text-color);
+  box-shadow: 0 4px 4px var(--primary-box-shadow-color);
 }
 
 .quote-display-area{
@@ -86,6 +170,16 @@ select{
   gap: 1em;
   padding: 1em;
 }
+
+.quote-nav button{
+  background-color: var(--primary-nav-btn-bg-color);
+}
+
+.quote-nav button:hover{
+  background-color: var(--primary-nav-btn-hover-bg-color);
+  opacity: var(--primary-button-hover-opacity);
+}
+
 
 
 
