@@ -108,7 +108,7 @@ label{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   gap: 1em;
   margin: 0.5em 1em;
   padding: 0.6em 1.2em;
