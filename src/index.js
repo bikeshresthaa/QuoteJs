@@ -1,4 +1,7 @@
 import "./styles.css";
-import { handleDocumentLoad } from "./dom_handler.js";
 
-handleDocumentLoad();
+import { initializeEventListeners } from "./dom_handler.js";
+
+document.addEventListener("DOMContentLoaded", function () {
+  initializeEventListeners();
+});

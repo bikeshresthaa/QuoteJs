@@ -1,35 +1,9 @@
-let data = await loadQuotes();
+import quotesData from './quotes.json';
 
-async function loadQuotes(){
-  const url = './quotes.json';
-
-  try{
-    const response = await fetch(url);
-
-    if(!response.ok){
-      const message = `An error occured while fetching quotes: ${response.status}`;
-      throw new Error(message);
-    }
-    const quotes = await response.json();
-
-    return quotes;
-  } catch(error){
-    console.error("There was a problem fetching quotes.", error);
-    displayError();
-
-  }
-
-};
-
-function displayError(){
-  const display = document.querySelector('.quote');
-  display.textContent = '';
-  display.textContent = "There was a problem loading quotes.";
-};
 
 function quotesManager(category){
   let currentQuote = 0;
-  let quotesList = data.category;
+  let quotesList = quotesData[category];
   const quoteLength = quotesList.length;
 
   const getQuote = function(){
@@ -52,7 +26,7 @@ function quotesManager(category){
   }
 
   const fetchQuote = function(index){
-    return quotesList(index).quote;
+    return quotesList[index].quote;
   }
 
   return { getQuote, getRandomQuote, getNextQuote, getPrevQuote };
