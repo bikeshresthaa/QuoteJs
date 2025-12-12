@@ -6,6 +6,88 @@
 }
 
 body {
-  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: #333;
 }
+
+button{
+  margin: 1em;
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 2em;
+  border: none;
+  background-color: none;
+
+}
+
+header{
+  width: 100%;
+  display: flex;
+  background-color: floralwhite;
+  align-items: center;
+  justify-content: space-between;
+  height: 10vh;
+  padding: 2em 3em;
+  margin-bottom: 4px;
+  box-shadow: 0 4px 4px rgb(214, 207, 192);
+}
+
+header button{
+  border: none;
+  background-color: none;
+}
+
+.theme-btn:hover {
+  background-color: rgb(225, 221, 211);
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  width: 75vw;
+}
+
+.quote-control{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.5em 1em;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+}
+
+select{
+  font-size: 0.9em;
+  border-radius: 2em;
+  padding: 0.2em 0.5em;
+}
+
+.screen{
+  display: flex;
+  flex-direction: column;
+  height: 45vh;
+  background-color: rgb(235, 235, 201);
+  border-radius: 2em;
+}
+
+.quote-display-area{
+  height: 80%;
+  padding: 2em;
+}
+
+.quote-nav{
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+}
+
+
+
+
+
