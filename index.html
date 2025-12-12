@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuotesJs</title>
+<script defer src="main.js"></script></head>
+<body>
+  <header>
+    <h1 class="title">QuotesJs</h1>
+    <button type="button" class="theme-btn">Light Mode</button>
+  </header>
+  <main>
+    <div class="quote-control">
+      <div class="font-change">
+        <label for="font-select">Font</label>
+        <select name="font-option" id="font-select">
+          <option value="1.5em">Small</option>
+          <option value="2.5em" selected>Medium</option>
+          <option value="3.5em">Large</option>
+        </select>
+      </div>
+
+      <div class="category-select">
+        <label for="quote-category">Category</label>  
+        <select name="categories" id="quote-category">
+          <option value="science">Science</option>
+          <option value="motivation">Motivation</option>
+          <option value="philosophy">Philosophy</option>
+          <option value="humor">Humor</option>
+          <option value="life">Life</option>
+        </select>
+      </div>
+
+      <div class="random-btn-container">
+        <button type="button" id="random-quote-btn">Random</button>
+      </div>
+    </div>
+
+    <div class="screen">
+      <div class="quote-display-area"><p class="quote"></p></div>
+
+      <div class="quote-nav">
+        <button type="button" id="prev">&#8249;</button>
+        <button type="button" id="next">&#8250;</button>
+      </div>
+    </div>
+
+
+  </main>
+</body>
+</html>
