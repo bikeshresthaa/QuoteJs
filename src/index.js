@@ -1,3 +1,4 @@
 import "./styles.css";
+import { handleDocumentLoad } from "./dom_handler.js";
 
-console.log("hello! we are making a quote generator!");
+handleDocumentLoad();
